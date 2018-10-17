@@ -11,12 +11,19 @@ public class EnterUserPage {
 	@FindBy(name = "FormsButton2")
 	private WebElement submit;
 
-	
-	public void add(String text, String text2) throws InterruptedException {
-		usernameBox.sendKeys(text);
-		passwordBox.sendKeys(text2);
-		submit.click();
-		
-		}
-
+public void add(String text, String text2) throws InterruptedException {
+		try {
+			usernameBox.sendKeys(text);
+			passwordBox.sendKeys(text2);
+			submit.click();
+		} catch (Exception e) {
+		}}
+		public void login(String text, String text2) throws InterruptedException {
+			try {
+				usernameBox.sendKeys(text);
+				passwordBox.sendKeys(text2);
+				submit.click();
+			} catch (Exception e) {
+			}
+	}
 }

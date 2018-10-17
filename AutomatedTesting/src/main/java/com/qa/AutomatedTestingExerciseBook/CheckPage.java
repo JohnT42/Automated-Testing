@@ -4,15 +4,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class CheckPage {
-@FindBy(xpath="/html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote")
-private WebElement usernameText;
-//@FindBy(xpath="/html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote/text()[2]")
-//private WebElement passwordText;
+	@FindBy(xpath = "/html/body/table/tbody/tr/td[1]/blockquote/blockquote[2]/blockquote")
+	private WebElement userpassText;
+	@FindBy(xpath = "/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote")
+	private WebElement loginText;
 
-public String getusername() {
-	return usernameText.getText();
-}
-//public WebElement getpassword() {
-	//return passwordText;
-//}
+	public String getuserpass() {
+		return userpassText.getText();
+	}
+
+	public String getlogin() {
+		return loginText.getText();
+	}
 }
